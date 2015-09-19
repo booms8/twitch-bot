@@ -4,7 +4,7 @@ import cron
 import thread
 
 class irc:
-	
+
 	def __init__(self, config):
 		self.config = config
 
@@ -22,7 +22,7 @@ class irc:
 			return True
 
 	def check_for_ping(self, data):
-		if data[:4] == "PING": 
+		if data[:4] == "PING":
 			self.sock.send('PONG')
 
 	def get_message(self, data):

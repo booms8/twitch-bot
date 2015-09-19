@@ -1,14 +1,8 @@
-"""
-Simple IRC Bot for Twitch.tv
-
-Developed by Aidan Thomson <aidraj0@gmail.com>
-"""
-
 import lib.irc as irc_
 from lib.functions_general import *
 import lib.functions_commands as commands
 
-class Roboraj:
+class Bot:
 
 	def __init__(self, config):
 		self.config = config
@@ -56,15 +50,15 @@ class Roboraj:
 
 							if commands.is_on_cooldown(command, channel):
 								pbot('Command is on cooldown. (%s) (%s) (%ss remaining)' % (
-									command, username, commands.get_cooldown_remaining(command, channel)), 
+									command, username, commands.get_cooldown_remaining(command, channel)),
 									channel
 								)
 							else:
 								pbot('Command is valid an not on cooldown. (%s) (%s)' % (
-									command, username), 
+									command, username),
 									channel
 								)
-								
+
 								result = commands.pass_to_function(command, args)
 								commands.update_last_used(command, channel)
 
@@ -76,12 +70,12 @@ class Roboraj:
 					else:
 						if commands.is_on_cooldown(command, channel):
 							pbot('Command is on cooldown. (%s) (%s) (%ss remaining)' % (
-									command, username, commands.get_cooldown_remaining(command, channel)), 
+									command, username, commands.get_cooldown_remaining(command, channel)),
 									channel
 							)
 						elif commands.check_has_return(command):
 							pbot('Command is valid and not on cooldown. (%s) (%s)' % (
-								command, username), 
+								command, username),
 								channel
 							)
 							commands.update_last_used(command, channel)

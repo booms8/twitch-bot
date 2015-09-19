@@ -10,23 +10,8 @@ commands = {
 		'limit': 180,
 		'argc': 0,
 		'return': 'command'
-	},
-
-	'!wow': {
-		'limit': 30,
-		'argc': 3,
-		'return': 'command'
 	}
 }
-
-
-
-
-
-
-
-
-
 
 for channel in config['channels']:
 	for command in commands:
