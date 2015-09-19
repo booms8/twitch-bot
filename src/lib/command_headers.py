@@ -10,6 +10,12 @@ commands = {
 		'limit': 180,
 		'argc': 0,
 		'return': 'command'
+	},
+
+	'!eightball': {
+		'limit': 15,
+		'argc': 0,
+		'return': 'command'
 	}
 }
 

@@ -20,8 +20,7 @@ config = {
 			'run_cron': False, 	# set this to false if you want don't want to run the cronjob but you want to preserve the messages etc
 			'run_time': 5, 		# time in seconds
 			'cron_messages': [
-				'This is channel_one cron message one.',
-				'This is channel_one cron message two.'
+				'This is channel_one cron message one.'
 			]
 		},
 
